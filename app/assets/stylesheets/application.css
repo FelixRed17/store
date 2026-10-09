@@ -1,0 +1,207 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+ body {
+    margin: 0;
+    padding: 32px;
+    background: #fbf8f0;
+    color: #193d31;
+    font-family: Arial, sans-serif;
+ }
+
+ .store-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+ }
+
+ .store-brand {
+    color: #193d31;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+ }
+
+ .store-header p {
+    margin: 8px 0 0;
+    color: #647066;
+ }
+
+ .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240ps, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+ }
+
+ .product-card {
+    padding: 24px;
+    background: #fffdf8;
+    border: 1px solid #dedfd5;
+    border-radius: 16px;
+ }
+
+ .product-card h2 {
+    margin: 0 0 24px;
+    font-size: 22px;
+ }
+
+ .product-link {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #c44a22;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+ }
+
+ .product-link:hover {
+    background: #a63816;
+ }
+
+ .account-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 0;
+    margin-left: auto;
+ }
+
+ .account-nav form {
+    margin: 0;
+ }
+
+ .form-card, .form-card * {
+    box-sizing: border-box;
+ }
+
+ .form-card {
+    width: 100%;
+    max-width: 520px;
+    margin: 40px auto;
+    padding: clamp(24px, 4vw, 40px);
+    background: #fffdf8;
+    border: 1px solid #dedfd5;
+    border-top: 5px solid #c44a22;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(25, 61, 49, 0.08);
+ }
+
+ .form-card h1 {
+    margin: 0 0 24px;
+    color: #193d31;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+ }
+
+ .form-card label {
+    display: block;
+    margin: 20px 0 8px;
+    color: #193d31;
+    font-size: 14px;
+    font-weight: 700;
+ }
+
+ .form-card input[type="text"],
+ .form-card input[type="email"],
+ .form-card input[type="password"],
+ .form-card input[type="number"],
+ .form-card textarea,
+ .form-card select {
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    color: #193d31;
+    background: #ffffff;
+    border: 1px solid #b9c4bc;
+    border-radius: 10px;
+    font: inherit;
+ }
+
+ .form-card input::placeholder {
+  color: #747e77;
+}
+
+.form-card input:focus-visible,
+.form-card textarea:focus-visible,
+.form-card select:focus-visible,
+.form-card button:focus-visible,
+.form-card a:focus-visible {
+  outline: 3px solid #c44a22;
+  outline-offset: 3px;
+}
+
+.form-card small {
+  display: block;
+  margin-top: 8px;
+  color: #647066;
+  line-height: 1.5;
+}
+
+/* Submit buttons */
+.form-card input[type="submit"],
+.form-card button[type="submit"] {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 24px;
+  padding: 14px 20px;
+  color: #ffffff;
+  background: #c44a22;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-card input[type="submit"]:hover,
+.form-card button[type="submit"]:hover {
+  background: #a63816;
+}
+
+/* Supporting links */
+.form-card a {
+  color: #193d31;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.form-card > a {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+/* Validation feedback */
+.form-errors {
+  margin-bottom: 24px;
+  padding: 16px;
+  color: #87351e;
+  background: #fff0ea;
+  border: 1px solid #e6b7a6;
+  border-radius: 10px;
+}
+
+.form-errors p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.form-errors ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  line-height: 1.6;
+}

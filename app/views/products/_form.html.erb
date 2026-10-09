@@ -1,0 +1,25 @@
+<section class="form-card">
+    <% product.errors.full_messages.each do |message| %>
+        <p><%= message %></p>
+    <% end %>
+
+    <%= form_with model: product do |form| %>
+        <div>
+            <%= form.label :name %>
+            <%= form.text_field :name %>
+        </div>
+
+        <div>
+            <%= form.label :price_cents, "Price in cents" %>
+
+            <%= form.number_field :price_cents,
+                                    min: 1,
+                                    step: 1,
+                                    required: true %>
+
+            <small>For R89.90, enter 8990.</small>
+        </div>
+
+        <%= form.submit "Create Product" %>
+    <% end %>
+</section>

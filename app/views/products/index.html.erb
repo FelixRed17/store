@@ -1,0 +1,7 @@
+<div class="products-grid">
+    <%= render @products %>
+
+    <% if authenticated? && Current.user.admin? %>
+        <%= link_to "New product", new_product_path %>
+    <% end %>
+</div>

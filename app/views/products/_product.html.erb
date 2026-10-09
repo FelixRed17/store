@@ -1,0 +1,7 @@
+<article class="product-card">
+    <h2><%= product.name %></h2>
+    <p><%= number_to_currency(product.price_cents / 100.0, unit: "R") %></p>
+
+    <%= link_to "View product ->", product_path(product), class: "product-link" %>
+
+</article>
