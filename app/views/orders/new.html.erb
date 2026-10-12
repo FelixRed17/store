@@ -1,0 +1,31 @@
+<section class="form-card">
+  <h1>Order <%= @product.name %></h1>
+
+  <p>
+    Price per unit:
+    <%= number_to_currency(@product.price_cents / 100.0, unit: "R") %>
+  </p>
+
+  <% if @order.errors.any? %>
+    <div class="form-errors" role="alert">
+      <p>Please check your order:</p>
+
+      <ul>
+        <% @order.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_with model: [@product, @order] do |form| %>
+    <div>
+      <%= form.label :quantity %>
+      <%= form.number_field :quantity, min: 1, step: 1, required: true %>
+    </div>
+
+    <%= form.submit "Place order" %>
+  <% end %>
+
+  <%= link_to "Back to product", product_path(@product) %>
+</section>

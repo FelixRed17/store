@@ -20,6 +20,13 @@
             <small>For R89.90, enter 8990.</small>
         </div>
 
+        <div>
+            <%= form.label :image, "Product Photo" %>
+            <%= form.file_field :image, accept: "image/jpeg,image/png,image/webp" %>
+
+            <small>Choose a JPG, PNG, or WebP photo.</small>
+        </div>
+
         <%= form.submit "Create Product" %>
     <% end %>
 </section>

@@ -45,7 +45,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.expect(product: [:name, :price_cents])
+    params.expect(product: [:name, :price_cents, :image])
   end
 
   def set_product

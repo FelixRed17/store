@@ -1,4 +1,11 @@
 <article class="product-card">
+    <% if product.image.attached? %>
+        <%= image_tag product.image, alt: product.name, class: "product-photo", loading: "lazy" %>
+    <% else %>
+        <div class="product-photo-placeholder">
+            Photo coming soon
+        </div>
+    <% end %>
     <h2><%= product.name %></h2>
     <p><%= number_to_currency(product.price_cents / 100.0, unit: "R") %></p>
 

@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "products#index"
 
-  resources :products
+  resources :products do 
+    resources :orders, only: [:new, :create]
+  end
+
   resource :registration, only: [:new, :create]
 end
